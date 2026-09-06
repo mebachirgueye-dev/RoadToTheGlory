@@ -1,0 +1,19 @@
+{
+  "id": "openeleven",
+  "name": "Road To The Glory — Écrivez votre légende du football",
+  "short_name": "Road To The Glory",
+  "description": "Un jeu de carrière de footballeur où chaque choix compte. Écrivez votre légende saison après saison.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#B35900",
+  "theme_color": "#B35900",
+  "categories": ["games", "sports"],
+  "icons": [
+    { "src": "src/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "src/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "src/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
