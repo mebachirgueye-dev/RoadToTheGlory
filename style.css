@@ -210,12 +210,12 @@ body {
 
   /* Niveaux de club — dégradé gris → orange vif, en écho au thème
      « Road to Glory » : plus on progresse, plus la couleur s'embrase. */
-  --lvl-regional: #ff0000;
-  --lvl-d4: #f2ff00;
-  --lvl-d3: #33e81f;
-  --lvl-d2: #0037ff;
-  --lvl-d1: #9d00ff;
-  --lvl-elite: #ff8001;
+  --lvl-regional: #9a9a9a;
+  --lvl-d4: #b9835a;
+  --lvl-d3: #d17a3f;
+  --lvl-d2: #e8791f;
+  --lvl-d1: #ff9500;
+  --lvl-elite: #ff8200;
 
   background: linear-gradient(160deg, #4caf50 0%, #388e3c 100%);
 }
