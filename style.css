@@ -169,7 +169,7 @@
 
 body {
   /* Marque */
-  --green: #ff8200;
+  --green: #b35900;
   --green-deep: #8a4300;
   --green-ink: #4a2500;
   --gold: #ff8200;
@@ -210,14 +210,14 @@ body {
 
   /* Niveaux de club — dégradé gris → orange vif, en écho au thème
      « Road to Glory » : plus on progresse, plus la couleur s'embrase. */
-  --lvl-regional: #9a9a9a;
-  --lvl-d4: #b9835a;
-  --lvl-d3: #d17a3f;
-  --lvl-d2: #e8791f;
-  --lvl-d1: #ff9500;
-  --lvl-elite: #ff8200;
+  --lvl-regional: #ff0000;
+  --lvl-d4: #f2ff00;
+  --lvl-d3: #33e81f;
+  --lvl-d2: #0037ff;
+  --lvl-d1: #9d00ff;
+  --lvl-elite: #ff8001;
 
-  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
+  background: linear-gradient(160deg, #4caf50 0%, #388e3c 100%);
 }
 
 /* Le fond vit sur une couche FIXE plein écran : bandes diagonales
