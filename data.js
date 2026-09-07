@@ -813,7 +813,7 @@ const COUNTRIES = [
   { id: "gn", name: "Guinée", flag: "🇬🇳", img: "src/img/flag/Flag_of_Guinea.png", of: "de Guinée", salaryMult: 0.35, growthMult: 0.74, mediaMult: 0.55, continent: "af" },
   { id: "bj", name: "Bénin", flag: "🇧🇯", img: "src/img/flag/Flag_of_Benin.png", of: "du Bénin", salaryMult: 0.33, growthMult: 0.73, mediaMult: 0.53, continent: "af" },
   { id: "sa", name: "Arabie Saoudite", flag: "🇸🇦", img: "src/img/flag/Flag_of_Saudi_Arabia.png", of: "d'Arabie Saoudite", salaryMult: 4.6, growthMult: 0.78, mediaMult: 0.5, continent: "as", gulf: true },
-  { id: "qa", name: "Qatar", flag: "🇶🇦", img: "src/img/flag/Flag_of_Qatar.png", of: "du Qatar", salaryMult: 3.1, growthMult: 0.78, mediaMult: 0.5, continent: "as", gulf: true },
+  { id: "qa", name: "Qatar", flag: "🇶🇦", img: "src/img/flag/Flag_of_Qatar.png", of: "du Qatar", salaryMult: 3.8, growthMult: 0.78, mediaMult: 0.5, continent: "as", gulf: true },
   { id: "ir", name: "Iran", flag: "🇮🇷", img: "src/img/flag/Flag_of_Iran.png", of: "d'Iran", salaryMult: 0.4, growthMult: 0.8, mediaMult: 0.5, continent: "as" },
   { id: "at", name: "Autriche", flag: "🇦🇹", img: "src/img/flag/Flag_of_Austria.png", of: "d'Autriche", salaryMult: 0.68, growthMult: 0.86, mediaMult: 0.7, continent: "eu" },
   { id: "ec", name: "Équateur", flag: "🇪🇨", img: "src/img/flag/Flag_of_Ecuador.png", of: "d'Équateur", salaryMult: 0.5, growthMult: 0.84, mediaMult: 0.6, continent: "am" },
