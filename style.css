@@ -147,19 +147,18 @@
 }
 
 /* ============================================================
-   ROAD TO THE GLORY — styles v8 (refonte "marque orange").
-   Thème unique : fond orange de marque (#B35900, dérivé de #FF8200)
-   à bandes diagonales, cartes blanches à en-têtes colorés, titres
-   Oswald, textes Poppins.
+   Road To Glory — styles v9 (refonte "marque marine & or").
+   Thème unique : fond bleu marine de marque (#00274C) à bandes
+   diagonales, cartes blanches à en-têtes colorés, titres Oswald,
+   textes Poppins.
    Les variables restent le contrat entre composants : les textes
-   posés directement sur l'orange utilisent --on-green*, ceux posés
+   posés directement sur le marine utilisent --on-green*, ceux posés
    sur les cartes blanches utilisent --text-*.
-   Note de contraste : #FF8200 pur n'offre que ~2.5:1 sur blanc, trop
-   faible pour du texte étendu sur toute la page. --green (fond plein
-   écran) utilise donc une teinte plus profonde de la même famille
-   (#B35900, ~4.8:1 avec du blanc) ; le #FF8200 exact demandé reste la
-   couleur d'accent vive (--gold) : boutons, bordures, badges — bien
-   plus visible ainsi que noyé dans un aplat de page.
+   Note de contraste : contrairement à l'orange précédent, #00274C est
+   assez sombre (≈15:1 avec du blanc) pour servir DIRECTEMENT de fond
+   plein écran, et #FFCB05 assez lumineux (≈10:1 sur marine) pour
+   servir de texte D'ACCENT à même le fond — plus simple et plus net
+   que le schéma orange qui demandait une teinte dérivée pour le fond.
    ============================================================ */
 :root {
   --radius: 16px;
@@ -169,55 +168,55 @@
 
 body {
   /* Marque */
-  --green: #b35900;
-  --green-deep: #8a4300;
-  --green-ink: #4a2500;
-  --gold: #ff8200;
-  --gold-bright: #ffd699;
-  --gold-deep: #8a3d00;
+  --green: #00274c;
+  --green-deep: #001830;
+  --green-ink: #00203d;
+  --gold: #ffcb05;
+  --gold-bright: #ffe066;
+  --gold-deep: #997400;
   --red: #d6483d;
   --brown: #4a2d10;
-  --cream: #fdefd8;
+  --cream: #fdf6e0;
   --blue: #2f6fd6;
   --blue-soft: #245cb8;
 
   /* Cartes blanches */
   --card-bg: #ffffff;
-  --card-bg-2: #f7f4f1;
-  --text-0: #241c16;
-  --text-1: #5c5049;
-  --text-2: #8a7d74;
-  --accent: #b35900;
-  --accent-soft: #cc6a00;
+  --card-bg-2: #f2f4f7;
+  --text-0: #1a2230;
+  --text-1: #4d5666;
+  --text-2: #7d8699;
+  --accent: #00274c;
+  --accent-soft: #001830;
   --good: #23875a;
   --good-text: #23875a;
   --bad: #c1473b;
   --bad-text: #c1473b;
-  --money: #9c5c00;
-  --gold-soft: #a85a00;
-  --panel: rgba(179, 89, 0, 0.06);
-  --panel-2: rgba(179, 89, 0, 0.12);
-  --line: rgba(74, 37, 0, 0.13);
-  --line-strong: rgba(74, 37, 0, 0.24);
-  --shadow: rgba(40, 20, 4, 0.3);
+  --money: #7a5c00;
+  --gold-soft: #7a5c00;
+  --panel: rgba(0, 39, 76, 0.06);
+  --panel-2: rgba(0, 39, 76, 0.12);
+  --line: rgba(0, 24, 48, 0.13);
+  --line-strong: rgba(0, 24, 48, 0.24);
+  --shadow: rgba(0, 15, 30, 0.3);
 
-  /* Textes posés directement sur le fond orange */
+  /* Textes posés directement sur le fond marine */
   --on-green: #ffffff;
   --on-green-soft: rgba(255, 255, 255, 0.88);
   --on-green-faint: rgba(255, 255, 255, 0.62);
   --on-green-line: rgba(255, 255, 255, 0.32);
   --on-green-panel: rgba(255, 255, 255, 0.14);
 
-  /* Niveaux de club — dégradé gris → orange vif, en écho au thème
-     « Road to Glory » : plus on progresse, plus la couleur s'embrase. */
+  /* Paliers de prestige (lycée/université/pro) — dégradé gris → bleu → or :
+     de l'anonymat à la lumière des projecteurs. */
   --lvl-regional: #9a9a9a;
-  --lvl-d4: #b9835a;
-  --lvl-d3: #d17a3f;
-  --lvl-d2: #e8791f;
-  --lvl-d1: #ff9500;
-  --lvl-elite: #ff8200;
+  --lvl-d4: #5c7a9a;
+  --lvl-d3: #3d6a97;
+  --lvl-d2: #2a5f9e;
+  --lvl-d1: #f4c430;
+  --lvl-elite: #ffcb05;
 
-  background: linear-gradient(160deg, #4caf50 0%, #388e3c 100%);
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
 }
 
 /* Le fond vit sur une couche FIXE plein écran : bandes diagonales
@@ -228,12 +227,12 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.06)),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.08)),
     repeating-linear-gradient(
       115deg,
-      rgba(0, 0, 0, 0.05) 0 150px,
+      rgba(0, 0, 0, 0.06) 0 150px,
       rgba(0, 0, 0, 0) 150px 300px,
-      rgba(255, 255, 255, 0.035) 300px 450px,
+      rgba(255, 255, 255, 0.03) 300px 450px,
       rgba(0, 0, 0, 0) 450px 600px
     ),
     linear-gradient(160deg, var(--green) 0%, var(--green-deep) 100%);
@@ -285,7 +284,7 @@ body { color: var(--text-0); }
 .home-hero {
   width: min(88%, 350px);
   height: auto;
-  filter: drop-shadow(0 10px 24px rgba(40, 20, 4, 0.35));
+  filter: drop-shadow(0 10px 24px rgba(0, 15, 30, 0.35));
 }
 .title {
   font-size: clamp(2.3rem, 10vw, 3rem);
@@ -295,9 +294,9 @@ body { color: var(--text-0); }
   color: var(--on-green);
   margin: -6px 0 0;
 }
-/* Mot « Glory » du titre : dégradé blanc → orange clair en fondu de texte,
-   même procédé que .wc-champion (Coupe du Monde) pour rester cohérent avec
-   le reste de la charte. */
+/* Accent du titre : dégradé blanc → or en fondu de texte,
+   même procédé que .wc-champion pour rester cohérent avec le reste
+   de la charte (nom de classe conservé depuis Road To The Glory). */
 .wm-glory {
   background: linear-gradient(135deg, #fff, var(--gold-bright));
   -webkit-background-clip: text;
@@ -407,7 +406,7 @@ body { color: var(--text-0); }
 .duel-panel .hc-cta { background: var(--green-ink); }
 .story-panel .hc-cta { background: var(--gold-deep); }
 
-.hc-text { margin: 0; font-size: 0.88rem; font-weight: 700; color: #241c16; }
+.hc-text { margin: 0; font-size: 0.88rem; font-weight: 700; color: #1a2230; }
 .story-best { font-size: 0.82rem; font-weight: 700; color: var(--gold-deep); }
 
 /* ---------- Mode Histoire : écran des légendes ---------- */
@@ -498,7 +497,7 @@ body { color: var(--text-0); }
   text-align: left;
   font-size: 0.86rem;
   font-weight: 600;
-  color: #4a2500;
+  color: #00203d;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -512,7 +511,7 @@ body { color: var(--text-0); }
   font-weight: 600;
   color: var(--text-0);
   background: #fff;
-  border: 1.6px solid #4a2500;
+  border: 1.6px solid #00203d;
   padding: 5px 12px;
   border-radius: 999px;
   display: inline-flex;
@@ -564,7 +563,7 @@ body { color: var(--text-0); }
 }
 .perk-card.perk-equipped-card {
   border: 2px solid var(--gold);
-  background: linear-gradient(135deg, rgba(255, 130, 0, 0.1), var(--card-bg));
+  background: linear-gradient(135deg, rgba(255, 203, 5, 0.1), var(--card-bg));
 }
 .perk-icon { font-size: 1.7rem; flex-shrink: 0; }
 .perk-body { flex: 1; min-width: 0; }
@@ -623,7 +622,7 @@ body { color: var(--text-0); }
 .duel-body .rival-compare { margin-bottom: 10px; }
 .duel-body .btn { width: 100%; margin-top: 10px; }
 .duel-body .rival-verdict { color: var(--on-green-soft); }
-.duel-note { text-align: center; font-size: 0.8rem; color: #ffe3c2; font-weight: 700; margin: 10px 0 0; min-height: 1em; }
+.duel-note { text-align: center; font-size: 0.8rem; color: #fff3c2; font-weight: 700; margin: 10px 0 0; min-height: 1em; }
 
 /* ---------- Écran quêtes ---------- */
 .quest-hero {
@@ -659,7 +658,7 @@ body { color: var(--text-0); }
   border: 1px solid var(--line-strong);
   transition: background 0.2s ease;
 }
-.streak-dot.on { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 8px rgba(255, 130, 0, 0.5); }
+.streak-dot.on { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 8px rgba(255, 203, 5, 0.5); }
 .quest-hero-stats {
   display: flex; justify-content: center; gap: 10px;
   margin-top: 14px; padding-top: 14px;
@@ -725,11 +724,11 @@ body { color: var(--text-0); }
 /* Défi légendaire : traitement doré premium */
 .legend-wrap .quest-card {
   border: 1.5px solid var(--gold);
-  background: linear-gradient(135deg, rgba(255, 214, 153, 0.16), var(--card-bg) 65%);
-  box-shadow: 0 4px 16px rgba(55, 25, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 224, 102, 0.16), var(--card-bg) 65%);
+  box-shadow: 0 4px 16px rgba(60, 45, 0, 0.3);
 }
 .legend-wrap .quest-card.quest-card-done {
-  background: linear-gradient(135deg, rgba(255, 214, 153, 0.3), var(--card-bg) 70%);
+  background: linear-gradient(135deg, rgba(255, 224, 102, 0.3), var(--card-bg) 70%);
 }
 .legend-wrap .qc-pts { color: var(--gold-soft); }
 
@@ -894,7 +893,7 @@ body { color: var(--text-0); }
 }
 @keyframes online-badge-pop { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 /* Survol : remplissage doré OPAQUE (plus de fond translucide délavé). */
-.online-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(255, 130, 0, 0.32); background: var(--gold); border-color: var(--gold); color: #3a2c05; }
+.online-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(255, 203, 5, 0.32); background: var(--gold); border-color: var(--gold); color: #3a2c05; }
 .online-btn:active { transform: translateY(0); }
 @media (max-width: 360px) { .online-btn { font-size: 0.78rem; padding: 11px 4px; } }
 
@@ -952,7 +951,7 @@ body { color: var(--text-0); }
 .natl-row {
   display: grid; grid-template-columns: 2.4em 1fr auto 2.6em;
   align-items: center; gap: 8px;
-  padding: 6px 4px; border-bottom: 1px solid rgba(74, 37, 0, 0.08);
+  padding: 6px 4px; border-bottom: 1px solid rgba(0, 24, 48, 0.08);
   font-size: 0.92rem;
 }
 .natl-row:last-child { border-bottom: none; }
@@ -997,7 +996,7 @@ body { color: var(--text-0); }
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(30, 16, 4, 0.66);
+  background: rgba(0, 10, 20, 0.66);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   animation: modalFade 0.2s ease;
@@ -1085,7 +1084,7 @@ body { color: var(--text-0); }
   margin-top: 18px;
   box-shadow: 0 6px 18px var(--shadow);
 }
-.btn-secondary:hover { background: #fdf4ee; }
+.btn-secondary:hover { background: #eef2f7; }
 /* Barre du tunnel de création : Retour à gauche, tirage complet à droite.
    order:-1 la remonte en tête du flex-column sans toucher à l'ordre du HTML.
    Elle défile AVEC la page : une barre collante imposerait un fond opaque pour
@@ -1125,7 +1124,7 @@ body { color: var(--text-0); }
   font-family: var(--font);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--green-deep, #8a4300);
+  color: var(--green-deep, #001830);
   background: var(--gold);
   border: none;
   border-radius: 999px;
@@ -1179,7 +1178,7 @@ body { color: var(--text-0); }
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--on-green-line);
 }
-.step-dot.active { background: var(--gold-bright); box-shadow: 0 0 8px rgba(255, 214, 153, 0.8); }
+.step-dot.active { background: var(--gold-bright); box-shadow: 0 0 8px rgba(255, 224, 102, 0.8); }
 .step-dot.done { background: #fff; }
 .pot-stars { color: var(--gold-soft); font-weight: 700; letter-spacing: 2px; }
 /* Cas particulier : à l'écran académie, ces étoiles sont posées directement
@@ -1217,7 +1216,7 @@ body { color: var(--text-0); }
   border-radius: 6px;
   margin: 0 auto 8px;
   border: 1px solid var(--line-strong);
-  box-shadow: 0 2px 8px rgba(40, 20, 4, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 15, 30, 0.18);
 }
 .nat-name { font-weight: 600; font-size: 0.85rem; }
 .nat-count { display: block; margin-top: 4px; font-size: 0.72rem; color: var(--text-2); font-weight: 500; }
@@ -1269,7 +1268,7 @@ body { color: var(--text-0); }
 .level-d3 { background: var(--lvl-d3); }
 .level-d2 { background: var(--lvl-d2); }
 .level-d1 { background: var(--lvl-d1); }
-.level-elite { background: linear-gradient(135deg, #ffb347, var(--lvl-elite)); box-shadow: 0 0 10px rgba(255, 130, 0, 0.6); }
+.level-elite { background: linear-gradient(135deg, #ffe066, var(--lvl-elite)); box-shadow: 0 0 10px rgba(255, 203, 5, 0.6); }
 .loan-tag {
   display: inline-block;
   border: 1px solid var(--blue);
@@ -1337,7 +1336,7 @@ body { color: var(--text-0); }
   box-shadow: 0 3px 10px var(--shadow);
 }
 .ovr-badge {
-  background: linear-gradient(135deg, #fff1e0, #ffd9a8);
+  background: linear-gradient(135deg, #fff8e0, #ffe89e);
   color: var(--gold-deep);
   font-size: 0.95rem;
 }
@@ -1479,8 +1478,8 @@ body { color: var(--text-0); }
 .profile-meta { font-size: 0.76rem; color: var(--text-1); margin: 10px 0 0; }
 .profile-traits { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
 .trait-chip {
-  background: rgba(255, 130, 0, 0.12);
-  border: 1px solid rgba(255, 130, 0, 0.45);
+  background: rgba(255, 203, 5, 0.12);
+  border: 1px solid rgba(255, 203, 5, 0.45);
   color: var(--gold-soft);
   border-radius: 999px;
   padding: 4px 10px;
@@ -1495,7 +1494,7 @@ body { color: var(--text-0); }
   align-items: center;
   gap: 12px;
   background: var(--panel-2);
-  border: 1px solid rgba(179, 89, 0, 0.3);
+  border: 1px solid rgba(0, 39, 76, 0.3);
   border-radius: 14px;
   padding: 12px 14px;
   margin: 4px 0 18px;
@@ -1567,7 +1566,7 @@ body { color: var(--text-0); }
 }
 .game-card.tone-great {
   border-color: var(--gold-bright);
-  box-shadow: 0 0 30px rgba(255, 214, 153, 0.45), 0 12px 30px var(--shadow);
+  box-shadow: 0 0 30px rgba(255, 224, 102, 0.45), 0 12px 30px var(--shadow);
 }
 .game-card.tone-good { border-color: rgba(35, 135, 90, 0.6); }
 .game-card.tone-bad { border-color: rgba(214, 72, 61, 0.5); }
@@ -1617,7 +1616,7 @@ body { color: var(--text-0); }
   font-family: var(--font);
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease, opacity 0.2s ease;
 }
-.opt-btn:hover { background: #fdeee0; border-color: var(--green); }
+.opt-btn:hover { background: #eef2f7; border-color: var(--green); }
 .opt-btn:active { transform: scale(0.97); }
 .opt-btn.thinking, .opt-btn:disabled { opacity: 0.35; pointer-events: none; }
 .opt-hint {
@@ -1658,10 +1657,10 @@ body { color: var(--text-0); }
 }
 .fx-good { background: rgba(35, 135, 90, 0.1); border: 1px solid rgba(35, 135, 90, 0.5); color: var(--good-text); }
 .fx-bad { background: rgba(214, 72, 61, 0.09); border: 1px solid rgba(214, 72, 61, 0.5); color: var(--bad-text); }
-.fx-money { background: rgba(255, 130, 0, 0.11); border: 1px solid rgba(255, 130, 0, 0.5); color: var(--money); }
+.fx-money { background: rgba(255, 203, 5, 0.11); border: 1px solid rgba(255, 203, 5, 0.5); color: var(--money); }
 .fx-trophy {
-  background: rgba(255, 214, 153, 0.16);
-  border: 1px solid rgba(255, 130, 0, 0.65);
+  background: rgba(255, 224, 102, 0.16);
+  border: 1px solid rgba(255, 203, 5, 0.65);
   color: var(--gold-soft);
   animation: chipIn 0.35s ease forwards, trophyGlow 1.8s ease-in-out 0.5s infinite;
 }
@@ -1934,7 +1933,7 @@ body { color: var(--text-0); }
   color: var(--text-1);
 }
 .mv-value { font-weight: 800; color: var(--green); }
-.mv-peak .mv-value { color: var(--gold-soft, #a85a00); }
+.mv-peak .mv-value { color: var(--gold-soft, #7a5c00); }
 .mv-chart {
   display: block;
   width: 100%;
@@ -1943,10 +1942,10 @@ body { color: var(--text-0); }
 }
 .mv-area { fill: var(--accent-soft, var(--green)); opacity: 0.16; }
 .mv-line { fill: none; stroke: var(--green); stroke-width: 1.6; vector-effect: non-scaling-stroke; }
-.mv-dot { fill: var(--gold-soft, #a85a00); }
+.mv-dot { fill: var(--gold-soft, #7a5c00); }
 @keyframes trophyGlow {
   0%, 100% { text-shadow: none; }
-  50% { text-shadow: 0 0 12px rgba(255, 214, 153, 0.9); }
+  50% { text-shadow: 0 0 12px rgba(255, 224, 102, 0.9); }
 }
 .pc-story {
   font-size: 0.92rem;
@@ -2019,7 +2018,7 @@ body { color: var(--text-0); }
 .path-step {
   position: relative;
   padding-left: 18px;
-  border-left: 2px solid rgba(255, 130, 0, 0.4);
+  border-left: 2px solid rgba(255, 203, 5, 0.4);
   font-size: 0.85rem;
 }
 .path-step::before {
@@ -2090,7 +2089,7 @@ body { color: var(--text-0); }
   border-radius: 12px;
   padding: 12px 10px;
   text-align: left;
-  box-shadow: 0 4px 12px rgba(40, 20, 4, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 15, 30, 0.12);
 }
 .rival-col-name {
   font-weight: 700;
@@ -2186,7 +2185,7 @@ body { color: var(--text-0); }
   gap: 5px;
   box-shadow: 0 4px 12px var(--shadow);
 }
-.badge-item.unlocked { border-color: rgba(255, 130, 0, 0.65); }
+.badge-item.unlocked { border-color: rgba(255, 203, 5, 0.65); }
 .badge-item.badge-platine.unlocked {
   border-color: rgba(138, 95, 208, 0.75);
   box-shadow: 0 0 18px rgba(138, 95, 208, 0.4);
@@ -2217,11 +2216,11 @@ body { color: var(--text-0); }
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 999px;
-  border: 1.5px solid white;
+  border: 1.5px solid var(--gold-soft);
   background: transparent;
-  color: white;
+  color: var(--gold-soft);
   cursor: pointer;
-  transition: transform 0.1s ease;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.1s ease;
   white-space: nowrap;
 }
 .pantheon-sort-chip:hover { transform: translateY(-1px); }
