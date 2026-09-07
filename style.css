@@ -774,6 +774,10 @@ body { color: var(--text-0); }
   font-size: 0.72rem;
   margin: 18px 0 0;
 }
+.apropos {
+  transition: color 0.15s ease;
+}
+
 /* Lien vers le dépôt GitHub, discret en pied d'accueil. */
 .github-link {
   display: inline-flex;
