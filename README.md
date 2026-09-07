@@ -67,8 +67,4 @@ Le jeu est jouable en ligne, directement ici : ****.
 
 Vous pouvez aussi le lancer en local : ouvrez simplement le fichier **`index.html`** dans votre navigateur et le jeu démarre immédiatement, sans rien avoir à installer.
 
-## 📄 Licence
-
-Road To The Glory est distribué sous licence **GNU General Public License v3** (voir le fichier [`LICENSE`](LICENSE)) : vous êtes libre de l'utiliser, de l'étudier, de le modifier et de le partager, à condition que toute version dérivée reste elle aussi sous cette même licence. Les polices **Oswald** et **Poppins** sont, quant à elles, distribuées sous licence SIL Open Font License 1.1.
-
 ---
