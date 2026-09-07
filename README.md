@@ -63,7 +63,7 @@ En club comme en sélection, tout se joue :
 
 ## ▶️ Comment y jouer
 
-Le jeu est jouable en ligne, directement ici : **[openeleven.laugh.yt](https://openeleven.laugh.yt)**.
+Le jeu est jouable en ligne, directement ici : ****.
 
 Vous pouvez aussi le lancer en local : ouvrez simplement le fichier **`index.html`** dans votre navigateur et le jeu démarre immédiatement, sans rien avoir à installer.
 
