@@ -1617,7 +1617,7 @@
     const bar = $("pantheon-sort");
     if (!bar) return;
     bar.innerHTML = PANTHEON_SORTS.map((s) =>
-      `<button class="pantheon-sort-chip${s.id === pantheonSort ? " on" : ""}" data-sort="${s.id}">${s.label}</button>`
+      `<button class="pantheon-sort-chip${s.id === pantheonSort ? " on" : ""}" data-sort="${s.id}" style="color: white;">${s.label}</button>`
     ).join("");
     bar.querySelectorAll(".pantheon-sort-chip").forEach((btn) => {
       btn.addEventListener("click", () => {

@@ -2217,11 +2217,11 @@ body { color: var(--text-0); }
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 999px;
-  border: 1.5px solid var(--gold-soft);
+  border: 1.5px solid white;
   background: transparent;
-  color: var(--gold-soft);
+  color: white;
   cursor: pointer;
-  transition: background 0.12s ease, color 0.12s ease, transform 0.1s ease;
+  transition: transform 0.1s ease;
   white-space: nowrap;
 }
 .pantheon-sort-chip:hover { transform: translateY(-1px); }
