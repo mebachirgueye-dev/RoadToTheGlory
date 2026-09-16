@@ -812,16 +812,17 @@ body { color: var(--text-0); }
   width: 100%;
   margin: 10px 0 2px;
 }
-.account-fab {
+.save-io { display: flex; gap: 8px; }
+.save-io-fab {
   width: 42px; height: 42px; border-radius: 50%;
   border: 1px solid var(--on-green-line); background: var(--on-green-panel);
   color: var(--on-green); font-size: 1.15rem; line-height: 1; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: background 0.15s ease, transform 0.12s ease;
 }
-.account-fab:hover { background: rgba(255, 255, 255, 0.22); transform: translateY(-1px); }
-.account-fab:active { transform: scale(0.95); }
-.account-fab:focus-visible { outline: 2px solid var(--on-green); outline-offset: 2px; }
+.save-io-fab:hover { background: rgba(255, 255, 255, 0.22); transform: translateY(-1px); }
+.save-io-fab:active { transform: scale(0.95); }
+.save-io-fab:focus-visible { outline: 2px solid var(--on-green); outline-offset: 2px; }
 
 /* ---------- Sélecteur de langue ----------
    Dans .home-topbar, à côté du bouton de compte. Reprend les tons "sur fond vert". */
