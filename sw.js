@@ -9,12 +9,12 @@
    ⚠️ À CHAQUE DÉPLOIEMENT : bumper CACHE (ci-dessous) en même temps
    que le ?v= d'index.html — l'ancien cache est alors purgé.
    ============================================================ */
-const CACHE = "road-to-the-glory-v12.00";
+const CACHE = "road-to-the-glory-v12.10";
 const CORE = [
   "./", "./index.html",
-  "./style.css?v=12.00", "./data-clubs.js?v=12.00", "./data-moments.js?v=12.00", "./data-events.js?v=12.00", "./data.js?v=12.00", "./engine.js?v=12.00", "./game.js?v=12.00", "./game-card.js?v=12.00", "./i18n-boot.js?v=12.00", "./i18n-data.js?v=12.00", "./i18n.js?v=12.00", "./sw-register.js?v=12.00",
-  "./src/vendor/supabase.js?v=12.00", "./src/supabase-config.js?v=12.00", "./src/badwords.js?v=12.00", "./account.js?v=12.00", "./room.js?v=12.00",
-  "./site.webmanifest", "./favicon.svg", "./privacy.html",
+  "./style.css?v=12.10", "./data-clubs.js?v=12.10", "./data-moments.js?v=12.10", "./data-events.js?v=12.10", "./data.js?v=12.10", "./engine.js?v=12.10", "./game.js?v=12.10", "./game-card.js?v=12.10", "./i18n-boot.js?v=12.10", "./i18n-data.js?v=12.10", "./i18n.js?v=12.10", "./sw-register.js?v=12.10",
+  "./save-io.js?v=12.10", "./room.js?v=12.10",
+  "./site.webmanifest", "./privacy.html",
   "./src/img/icon-512.png", "./src/img/icon-192.png", "./src/img/icon-maskable-512.png",
 ];
 

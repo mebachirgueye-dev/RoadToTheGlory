@@ -1,7 +1,9 @@
 /* ============================================================
    Salle « carrière commune au même club » (jusqu'à 4 joueurs) — module
-   AUTONOME, greffé sur account.js SANS lui faire connaître la notion de
-   salle (il expose juste son client Supabase/session/liste d'amis).
+   AUTONOME, greffé sur un module de compte exposant window.OpenElevenAccount
+   (client Supabase/session/liste d'amis). Ce module n'existe plus dans cette
+   version du jeu (remplacé par save-io.js, export/import local) : la salle
+   est donc désactivée — cf. le garde-fou juste plus bas.
 
    Phase A : cycle de vie du lobby — créer une salle, inviter des amis,
    accepter/décliner, quitter.
@@ -21,8 +23,8 @@
 
   const acc = window.OpenElevenAccount;
   const btn = document.getElementById("btn-room");
-  // Pas de compte configuré (mode invité) → la salle n'a pas de sens, on
-  // masque le bouton et on s'arrête là, comme account.js le fait lui-même.
+  // Plus de module de compte (window.OpenElevenAccount) dans cette version →
+  // la salle n'a pas de sens, on masque le bouton et on s'arrête là.
   if (!acc || !acc.getClient) {
     if (btn) btn.style.display = "none";
     return;

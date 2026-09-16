@@ -48,7 +48,7 @@ En club comme en sélection, tout se joue :
 |------|---------|
 | 👤 **Carrière** | Le mode principal, plein de hasard, avec vos avantages de boutique équipés. |
 | 🗓️ **Défi du jour** | Le même profil imposé pour tout le monde, déterministe : le meilleur score l'emporte. |
-| 🆚 **Duel** | Par lien ou par pseudo : la même carrière de départ rejouée, deux légendes comparées à la fin, score vérifié par le serveur. |
+| 🆚 **Duel** | Par lien : la même carrière de départ, rejouée par un ami, deux légendes comparées à la fin. |
 | 🎬 **Mode Histoire** | Revivez des carrières inspirées des plus grands et tentez de faire mieux qu'elles. |
 
 ## ✨ Et de quoi revenir chaque jour
@@ -59,7 +59,7 @@ En club comme en sélection, tout se joue :
 - 🎯 Des **quêtes** du jour, de la semaine et légendaires
 - 🔥 Des **séries** à entretenir
 - 🏛️ Un **Panthéon** triable (score, trophées, note, fortune…) qui archive vos plus belles carrières, fiche complète consultable à l'appui
-- 👥 Un **compte cloud optionnel** : progression synchronisée entre appareils, amis, profils publics consultables et classement mondial
+- 💾 **Export / import de la sauvegarde** en un clic : un fichier JSON à garder de côté ou à transférer vers un autre appareil, sans compte ni serveur
 
 ## ▶️ Comment y jouer
 
