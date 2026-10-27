@@ -63,7 +63,7 @@ En club comme en sélection, tout se joue :
 
 ## ▶️ Comment y jouer
 
-Le jeu est jouable en ligne, directement ici : ****.
+Le jeu est jouable en ligne, directement ici : **https://roadtotheglory.vercel.app/**.
 
 Vous pouvez aussi le lancer en local : ouvrez simplement le fichier **`index.html`** dans votre navigateur et le jeu démarre immédiatement, sans rien avoir à installer.
 
